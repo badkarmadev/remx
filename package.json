@@ -1,0 +1,42 @@
+{
+  "name": "remx.css",
+  "version": "1.0.0",
+  "description": "The simplest CSS framework based on 1rem",
+  "author": "BadKarmaDev <yo@wtf.kz>",
+  "license": "MIT",
+  "repository": "badkarmadev/remx.css",
+  "homepage": "https://dev.wtf.kz/remx.css",
+  "bugs": "https://github.com/badkarmadev/remx.css/issues",
+  "main": "dist/remx.min.css",
+  "style": "dist/remx.min.css",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/remx.min.css",
+    "./aspect-ratio": "./dist/aspect-ratio.min.css",
+    "./container": "./dist/container.min.css",
+    "./display": "./dist/display.min.css",
+    "./gap": "./dist/gap.min.css",
+    "./layout": "./dist/layout.min.css",
+    "./margin": "./dist/margin.min.css",
+    "./padding": "./dist/padding.min.css",
+    "./positioning": "./dist/positioning.min.css",
+    "./reset": "./dist/reset.min.css",
+    "./sizing": "./dist/sizing.min.css",
+    "./typography": "./dist/typography.min.css",
+    "./utilities": "./dist/utilities.min.css",
+    "./variables": "./dist/variables.min.css"
+  },
+  "scripts": {
+    "build": "node build.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "cssnano": "^6.0.5",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1"
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+}

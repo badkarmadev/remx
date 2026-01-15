@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>remx.css Documentation</title>
+	<style>
+		:root {
+			--color-primary: #b00b69;
+			--color-secondary: #4f46e5;
+			--color-tertiary: #336699;
+			--color-white: #f5f5f5;
+			--color-black: #1d1d1d;
+		}
+
+		html {
+			overflow-x: hidden;
+			scroll-behavior: smooth;
+		}
+
+		body {
+			color: #333;
+			background-color: #f8f9fa;
+		}
+
+		.sidebar {
+			height: 100vh;
+			overflow-y: auto;
+			border-right: 1px solid #e5e7eb;
+			background: white;
+		}
+
+		.content {
+			min-height: 100vh;
+		}
+
+		.hero {
+			background: white;
+
+			padding: var(--size-xl) var(--size-l);
+			margin-bottom: var(--size-xl);
+		}
+
+		.main {
+			background-color: #f8f9fa;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23336699' fill-opacity='0.33'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+			background-size: 100px 100px;
+			animation: moving_background 10s linear infinite;
+		}
+
+		ul {
+			list-style-type: none;
+		}
+
+		@keyframes moving_background {
+			0% {
+				background-position: 0 0;
+			}
+
+			100% {
+				background-position: 100px 100px;
+			}
+		}
+
+		h1 {
+			color: var(--color-primary);
+		}
+
+		h2 {
+			color: var(--color-text);
+		}
+
+		h3 {
+			color: var(--color-black);
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			background: white;
+			border-radius: var(--size-s);
+			overflow: hidden;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+		}
+
+		th,
+		td {
+			padding: var(--size-m);
+			text-align: left;
+			border-bottom: 1px solid #e5e7eb;
+		}
+
+		th {
+			background: #f9fafb;
+			font-weight: 700;
+		}
+
+		code {
+			background: #f3f4f6;
+			padding: 0.2rem 0.4rem;
+			border-radius: 0.25rem;
+			font-family: monospace;
+			font-size: 0.875em;
+			color: #b00b69;
+		}
+
+		.demo-box {
+			background: white;
+			border: 1px solid #e5e7eb;
+			border-radius: var(--size-s);
+			padding: var(--size-l);
+			margin-bottom: var(--size-m);
+		}
+
+		.controls {
+			background: #f3f4f6;
+			padding: var(--size-m);
+			border-radius: var(--size-s);
+		}
+
+		.code-block {
+			background: #353c3d;
+			color: #f3f4f6;
+			padding: var(--size-m);
+			border-radius: var(--size-s);
+			font-family: monospace;
+			position: relative;
+			margin-top: var(--size-m);
+			overflow-x: auto;
+		}
+
+		.copy-btn {
+			position: absolute;
+			top: var(--size-xs);
+			right: var(--size-xs);
+			background: rgba(255, 255, 255, 0.1);
+			border: none;
+			color: white;
+			padding: var(--size-xs) var(--size-s);
+			border-radius: var(--size-xs);
+			cursor: pointer;
+			font-size: var(--font-size-xs);
+		}
+
+		.copy-btn:hover {
+			background: rgba(255, 255, 255, 0.2);
+		}
+
+		.nav-link {
+			display: block;
+			padding: var(--size-s) var(--size-m);
+			color: #4b5563;
+			text-decoration: none;
+			border-left: 3px solid transparent;
+		}
+
+		.nav-link:hover,
+		.nav-link.active {
+			background: #f3f4f6;
+			color: #111827;
+			border-left-color: #b00b69;
+		}
+
+		input[type=range] {
+			width: 100%;
+		}
+
+		.badge {
+			display: inline-block;
+			padding: 0.25rem 0.5rem;
+			border-radius: 0.25rem;
+			font-size: 1rem;
+			font-weight: 700;
+		}
+
+		body::-webkit-scrollbar {
+			width: 1rem;
+		}
+
+		body::-webkit-scrollbar-thumb {
+			background-color: var(--color-primary);
+			border-radius: 0;
+		}
+
+		body::-webkit-scrollbar-track {
+			background-color: var(--color-white);
+			border-radius: 0;
+		}
+
+		/* Browsers without `::-webkit-scrollbar-*` support */
+		@supports not selector(::-webkit-scrollbar) {
+			html {
+				scrollbar-width: thin;
+				scrollbar-color: var(--color-primary) var(--color-white);
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="../dist/remx.min.css">
+</head>
+
+<body>
+
+	<div class="container h-full">
+		<div class="grid-row">
+			<!-- Sidebar -->
+			<aside class="d-none d-m-block col-12 col-m-3 position-sticky top-0 sidebar p-0 ">
+				<div class="p-m">
+					<span class="fs-xl fw-900 mb-s">remx.css</span>
+					<p class="fs-s text-secondary">v1.0.0</p>
+				</div>
+				<nav>
+					<a href="#container" class="nav-link">Container</a>
+					<a href="#grid" class="nav-link">Grid</a>
+					<a href="#spacing" class="nav-link">Spacing (Margin/Padding)</a>
+					<a href="#gap" class="nav-link">Gap</a>
+					<a href="#typography" class="nav-link">Typography</a>
+					<a href="#radius" class="nav-link">Radius</a>
+					<a href="#positioning" class="nav-link">Positioning</a>
+					<a href="#line-clamp" class="nav-link">Line Clamp</a>
+					<a href="#aspect-ratio" class="nav-link">Aspect Ratio</a>
+					<a href="reference.md" class="nav-link">Class Reference</a>
+				</nav>
+			</aside>
+
+			<!-- Main Content -->
+			<div class="col-12 col-m-9 content p-0">
+
+				<!-- Hero Section -->
+				<div class="hero px-0 px-m-xl" id="intro">
+
+					<div
+						class="main py-xl py-m-5xl d-flex flex-column justify-content-center align-items-center text-center rounded-xl mb-xl">
+						<img src="r.png" alt="remx.css" class="mb-0" />
+						<h1 class="fs-5xl fw-900 mb-0">remx.css</h1>
+						<p class="fs-xl text-secondary mb-m">The simplest CSS framework based on <code>1rem</code></p>
+
+						<div class="mb-l d-flex flex-row justify-content-center gap-m">
+							<img src="https://img.shields.io/badge/bundle-90.77%20KB-blue" alt="Bundle Size"
+								class="mr-s d-none d-m-block">
+							<img src="https://img.shields.io/badge/modules-18-green" alt="Modules"
+								class="mr-s d-none d-m-block">
+							<img src="https://img.shields.io/badge/build-PostCSS-orange" alt="Build"
+								class="d-none d-m-block">
+							<a href="https://github.com/BadKarmaDev/remx.css" class="ml-0 ml-m-m">
+								<img src="https://img.shields.io/badge/GitHub-remx.css-blue" alt="GitHub">
+							</a>
+						</div>
+
+					</div>
+
+					<div class="mb-xl">
+						<h2 class="fs-3xl fw-400 mb-m">What does it do?</h2>
+						<ul class="fs-m mb-m">
+							<li><strong>Minimalist</strong>: Built on a single unit of measurement (<code>1rem</code>).
+							</li>
+							<li><strong>Lightweight</strong>: ~90KB minified, broken down into 18 independent modules.
+							</li>
+							<li><strong>Predictable</strong>: Consistent scaling and naming conventions.</li>
+							<li><strong>Performance</strong>: Zero runtime overhead, just pure CSS.</li>
+						</ul>
+					</div>
+
+					<div class="mb-xl">
+						<h2 class="fs-3xl fw-400 mb-m">Usage</h2>
+						<div class="code-block mb-m">
+							npm install remx.css
+						</div>
+						<div class="code-block mb-m">
+							&lt;link rel="stylesheet" href="https://unpkg.com/remx.css/dist/remx.min.css"&gt;
+						</div>
+					</div>
+				</div>
+
+				<div class="px-0 px-m-xl">
+					<!-- Container -->
+					<section id="container" class="mb-3xl">
+						<h2 class="section-title fs-4xl fw-400 mb-m">Container</h2>
+
+						<div class="demo-box">
+							<div class="container p-s rounded-s text-center"
+								style="background: transparent; border: 1px solid #ccc; color: #b00b69;">
+								container
+							</div>
+						</div>
+
+						<div class="code-block">
+							&lt;div class="container"&gt;...&lt;/div&gt;
+							<button class="copy-btn backdrop-blur-m" onclick="copyCode(this)">Copy</button>
+						</div>
+
+						<table>
+							<thead>
+								<tr>
+									<th>Префикс</th>
+									<th>Мин. ширина</th>
+									<th>Max-width контейнера</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>-</code></td>
+									<td>0px</td>
+									<td>100%</td>
+								</tr>
+								<tr>
+									<td><code>xxs</code></td>
+									<td>360px</td>
+									<td><code>col-xxs-6</code></td>
+								</tr>
+								<tr>
+									<td><code>xs</code></td>
+									<td>480px</td>
+									<td><code>col-xs-6</code></td>
+								</tr>
+								<tr>
+									<td><code>s</code></td>
+									<td>576px</td>
+									<td><code>col-s-6</code></td>
+								</tr>
+								<tr>
+									<td><code>m</code></td>
+									<td>768px</td>
+									<td><code>col-m-4</code></td>
+								</tr>
+								<tr>
+									<td><code>l</code></td>
+									<td>992px</td>
+									<td><code>col-l-3</code></td>
+								</tr>
+								<tr>
+									<td><code>xl</code></td>
+									<td>1200px</td>
+									<td><code>col-xl-3</code></td>
+								</tr>
+								<tr>
+									<td><code>xxl</code></td>
+									<td>1400px</td>
+									<td><code>col-xxl-2</code></td>
+								</tr>
+								<tr>
+									<td><code>3xl</code></td>
+									<td>1600px</td>
+									<td><code>col-3xl-2</code></td>
+								</tr>
+								<tr>
+									<td><code>4xl</code></td>
+									<td>1920px</td>
+									<td><code>col-4xl-1</code></td>
+								</tr>
+								<tr>
+									<td><code>5xl</code></td>
+									<td>2560px</td>
+									<td><code>col-5xl-1</code></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<!-- Grid -->
+					<section id="grid" class="my-3xl">
+						<h2 class="section-title fs-4xl fw-400 mb-m">Grid</h2>
+						<p class="mb-m">12-column grid system based on CSS Grid.</p>
+
+						<div class="demo-box">
+							<div class="grid-row gap-m text-center text-white">
+								<div class="col-12 bg-primary p-s rounded-s" style="background: #003366; color: #fff;">
+									col-12
+								</div>
+								<div class="col-6 bg-primary p-s rounded-s" style="background: #b00b69; color: #fff;">
+									col-6
+								</div>
+								<div class="col-6 bg-primary p-s rounded-s" style="background: #b00b69; color: #fff;">
+									col-6
+								</div>
+								<div class="col-4 bg-primary p-s rounded-s" style="background: #4f46e5; color: #fff;">
+									col-4
+								</div>
+								<div class="col-4 bg-primary p-s rounded-s" style="background: #4f46e5; color: #fff;">
+									col-4
+								</div>
+								<div class="col-4 bg-primary p-s rounded-s" style="background: #4f46e5; color: #fff;">
+									col-4
+								</div>
+							</div>
+							<div class="code-block">
+								&lt;div class="grid-row gap-m"&gt;<br>
+								&nbsp;&nbsp;&lt;div class="col-12"&gt;...&lt;/div&gt;<br>
+								&nbsp;&nbsp;&lt;div class="col-6"&gt;...&lt;/div&gt;<br>
+								&nbsp;&nbsp;&lt;div class="col-6"&gt;...&lt;/div&gt;<br>
+								&lt;/div&gt;
+								<button class="copy-btn backdrop-blur-m" onclick="copyCode(this)">Copy</button>
+							</div>
+						</div>
+
+						<table>
+							<thead>
+								<tr>
+									<th>Prefix</th>
+									<th>Min. width</th>
+									<th>Example</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>-</code></td>
+									<td>0px</td>
+									<td><code>col-12</code></td>
+								</tr>
+								<tr>
+									<td><code>xxs</code></td>
+									<td>360px</td>
+									<td><code>col-xxs-6</code></td>
+								</tr>
+								<tr>
+									<td><code>xs</code></td>
+									<td>480px</td>
+									<td><code>col-xs-6</code></td>
+								</tr>
+								<tr>
+									<td><code>s</code></td>
+									<td>576px</td>
+									<td><code>col-s-6</code></td>
+								</tr>
+								<tr>
+									<td><code>m</code></td>
+									<td>768px</td>
+									<td><code>col-m-4</code></td>
+								</tr>
+								<tr>
+									<td><code>l</code></td>
+									<td>992px</td>
+									<td><code>col-l-3</code></td>
+								</tr>
+								<tr>
+									<td><code>xl</code></td>
+									<td>1200px</td>
+									<td><code>col-xl-3</code></td>
+								</tr>
+								<tr>
+									<td><code>xxl</code></td>
+									<td>1400px</td>
+									<td><code>col-xxl-2</code></td>
+								</tr>
+								<tr>
+									<td><code>3xl</code></td>
+									<td>1600px</td>
+									<td><code>col-3xl-2</code></td>
+								</tr>
+								<tr>
+									<td><code>4xl</code></td>
+									<td>1920px</td>
+									<td><code>col-4xl-1</code></td>
+								</tr>
+								<tr>
+									<td><code>5xl</code></td>
+									<td>2560px</td>
+									<td><code>col-5xl-1</code></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<!-- Spacing Interactive -->
+					<section id="spacing" class="my-3xl">
+						<h2 class="section-title fs-3xl fw-400 mb-m">Spacing (Margin / Padding)</h2>
+
+						<div class="demo-box">
+							<div class="controls mt-0">
+								<div class="mb-m">
+									<label class="fw-700 block mb-xs">Type:</label>
+									<select id="spacing-type" class="p-xs rounded-xs w-100" onchange="updateSpacing()">
+										<option value="p">Padding (p)</option>
+										<option value="m">Margin (m)</option>
+									</select>
+								</div>
+								<div class="mb-m">
+									<label class="fw-700 block mb-xs">Side:</label>
+									<select id="spacing-side" class="p-xs rounded-xs w-100" onchange="updateSpacing()">
+										<option value="">All sides (-)</option>
+										<option value="x">Horizontal (x)</option>
+										<option value="y">Vertical (y)</option>
+										<option value="t">Top (t)</option>
+										<option value="r">Right (r)</option>
+										<option value="b">Bottom (b)</option>
+										<option value="l">Left (l)</option>
+									</select>
+								</div>
+								<div class="w-100">
+									<label class="fw-700 block mb-xs">Size:</label>
+									<input type="range" id="spacing-size" min="0" max="9" value="3"
+										oninput="updateSpacing()">
+									<div class="d-flex justify-content-between fs-xs text-secondary mt-xs">
+										<span>xxs</span><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span><span>xxl</span><span>3xl</span><span>4xl</span><span>5xl</span>
+									</div>
+									<div class="text-center fw-700 mt-xs" id="spacing-size-label">m</div>
+								</div>
+							</div>
+
+							<div class="code-block mb-m">
+								&lt;div class="<span id="spacing-code">p-m</span>"&gt;Content&lt;/div&gt;
+								<button class="copy-btn backdrop-blur-m" onclick="copyCode(this)">Copy</button>
+							</div>
+
+							<div id="spacing-target-wrapper" style="border: 1px dashed #ccc; display: inline-block;">
+								<div id="spacing-target" class="bg-primary text-white rounded-s"
+									style="background: #b00b69; color: white; transition: all 0.3s;">
+									Content
+								</div>
+							</div>
+						</div>
+
+						<table>
+							<thead>
+								<tr>
+									<th>Suffix</th>
+									<th>Value (rem)</th>
+									<th>Value (px)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>xxs</code></td>
+									<td>0.25rem</td>
+									<td>4px</td>
+								</tr>
+								<tr>
+									<td><code>xs</code></td>
+									<td>0.5rem</td>
+									<td>8px</td>
+								</tr>
+								<tr>
+									<td><code>s</code></td>
+									<td>0.75rem</td>
+									<td>12px</td>
+								</tr>
+								<tr>
+									<td><code>m</code></td>
+									<td>1rem</td>
+									<td>16px</td>
+								</tr>
+								<tr>
+									<td><code>l</code></td>
+									<td>1.25rem</td>
+									<td>20px</td>
+								</tr>
+								<tr>
+									<td><code>xl</code></td>
+									<td>1.5rem</td>
+									<td>24px</td>
+								</tr>
+								<tr>
+									<td><code>xxl</code></td>
+									<td>2rem</td>
+									<td>32px</td>
+								</tr>
+								<tr>
+									<td><code>3xl</code></td>
+									<td>3rem</td>
+									<td>48px</td>
+								</tr>
+								<tr>
+									<td><code>4xl</code></td>
+									<td>4rem</td>
+									<td>64px</td>
+								</tr>
+								<tr>
+									<td><code>5xl</code></td>
+									<td>7.5rem</td>
+									<td>120px</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<!-- Gap -->
+					<section id="gap" class="my-3xl">
+						<h2 class="section-title fs-3xl fw-400 mb-m">Gap</h2>
+
+						<div class="demo-box">
+							<div id="gap-target" class="d-flex flex-wrap bg-white border p-0 mb-m rounded-m"
+								style="transition: gap 0.3s;">
+								<div class="p-s bg-primary text-white rounded-s" style="background: #818cf8;">Item 1
+								</div>
+								<div class="p-s bg-primary text-white rounded-s" style="background: #818cf8;">Item 2
+								</div>
+								<div class="p-s bg-primary text-white rounded-s" style="background: #818cf8;">Item 3
+								</div>
+							</div>
+
+							<div class="controls">
+								<label class="fw-700 block mb-xs">Gap Size:</label>
+								<input type="range" id="gap-size" min="0" max="9" value="3" oninput="updateGap()">
+								<div class="d-flex justify-content-between fs-xs text-secondary mt-xs">
+									<span>xxs</span><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span><span>xxl</span><span>3xl</span><span>4xl</span><span>5xl</span>
+								</div>
+								<div class="text-center fw-700 mt-xs" id="gap-size-label">m</div>
+							</div>
+
+							<div class="code-block">
+								&lt;div class="d-flex <span id="gap-code">gap-m</span>"&gt;...&lt;/div&gt;
+								<button class="copy-btn backdrop-blur-m" onclick="copyCode(this)">Copy</button>
+							</div>
+						</div>
+					</section>
+
+					<!-- Typography -->
+					<section id="typography" class="my-3xl">
+						<h2 class="section-title fs-3xl fw-400 mb-m">Typography</h2>
+
+						<div class="demo-box">
+
+							<div class="controls">
+								<div class="mb-m">
+									<label class="fw-700 block mb-xs">Font Size:</label>
+									<input type="range" id="typo-size" min="0" max="9" value="3" oninput="updateTypo()">
+									<div class="d-flex justify-content-between fs-xs text-secondary mt-xs">
+										<span>xxs</span><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span><span>xxl</span><span>3xl</span><span>4xl</span><span>5xl</span>
+									</div>
+									<div class="text-center fw-700 mt-xs" id="typo-size-label">m</div>
+								</div>
+
+								<div class="mb-m">
+									<label class="fw-700 block mb-xs">Font Weight:</label>
+									<input type="range" id="typo-weight" min="100" max="900" step="100" value="400"
+										oninput="updateTypo()">
+									<div class="text-center fw-700 mt-xs" id="typo-weight-label">400</div>
+								</div>
+							</div>
+
+							<div class="code-block mb-m">
+								&lt;p class="<span id="typo-code">fs-m fw-400</span>"&gt;The quick brown fox jumps over
+								the lazy dog&lt;/p&gt;
+								<button class="copy-btn backdrop-blur-m" onclick="copyCode(this)">Copy</button>
+							</div>
+
+							<p id="typo-target" class="mb-0" style="transition: all 0.3s;">
+								The quick brown fox jumps over the lazy dog
+							</p>
+						</div>
+
+						<table>
+							<thead>
+								<tr>
+									<th>Class</th>
+									<th>Value (rem)</th>
+									<th>Value (px)</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>fs-xxs</code></td>
+									<td>0.625rem</td>
+									<td>10px</td>
+								</tr>
+								<tr>
+									<td><code>fs-xs</code></td>
+									<td>0.75rem</td>
+									<td>12px</td>
+								</tr>
+								<tr>
+									<td><code>fs-s</code></td>
+									<td>0.875rem</td>
+									<td>14px</td>
+								</tr>
+								<tr>
+									<td><code>fs-m</code></td>
+									<td>1rem</td>
+									<td>16px</td>
+								</tr>
+								<tr>
+									<td><code>fs-l</code></td>
+									<td>1.25rem</td>
+									<td>20px</td>
+								</tr>
+								<tr>
+									<td><code>fs-xl</code></td>
+									<td>1.5rem</td>
+									<td>24px</td>
+								</tr>
+								<tr>
+									<td><code>fs-xxl</code></td>
+									<td>2rem</td>
+									<td>32px</td>
+								</tr>
+								<tr>
+									<td><code>fs-3xl</code></td>
+									<td>2.5rem</td>
+									<td>40px</td>
+								</tr>
+								<tr>
+									<td><code>fs-4xl</code></td>
+									<td>3rem</td>
+									<td>48px</td>
+								</tr>
+								<tr>
+									<td><code>fs-5xl</code></td>
+									<td>4rem</td>
+									<td>64px</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+					<!-- Radius Interactive -->
+					<section id="radius" class="my-3xl">
+						<h2 class="section-title fs-3xl fw-400 mb-m">Radius</h2>
+
+						<div class="demo-box">
+							<div class="d-flex justify-content-center">
+								<div id="radius-target"
+									class="bg-primary text-white d-flex align-items-center justify-content-center"
+									style="width: 150px; height: 150px; background: #b00b69; transition: border-radius 0.3s;">
+									Radius
+								</div>
+							</div>
+
+							<div class="controls">
+								<label class="fw-700 block mb-xs">Radius Size:</label>
+								<input type="range" id="radius-range" min="0" max="11" value="4"
+									oninput="updateRadius()">
+								<div class="d-flex justify-content-between fs-xs text-secondary mt-xs">
+									<span>none</span><span>xxs</span><span>xs</span><span>s</span><span>m</span><span>l</span><span>xl</span><span>xxl</span><span>3xl</span><span>4xl</span><span>5xl</span><span>full</span>
+								</div>
+								<div class="text-center fw-700 mt-xs" id="radius-label">rounded-m</div>
+							</div>
+
+							<div class="code-block">
+								&lt;div class="<span id="radius-code">rounded-m</span>"&gt;...&lt;/div&gt;
+								<button class="copy-btn backdrop-blur-m" onclick="copyCode(this)">Copy</button>
+							</div>
+						</div>
+
+						<table>
+							<thead>
+								<tr>
+									<th>Class</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><code>rounded-none</code></td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td><code>rounded-xxs</code></td>
+									<td>0.25rem (4px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-xs</code></td>
+									<td>0.5rem (8px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-s</code></td>
+									<td>0.75rem (12px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-m</code></td>
+									<td>1rem (16px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-l</code></td>
+									<td>1.25rem (20px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-xl</code></td>
+									<td>1.5rem (24px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-xxl</code></td>
+									<td>2rem (32px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-3xl</code></td>
+									<td>3rem (48px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-4xl</code></td>
+									<td>4rem (64px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-5xl</code></td>
+									<td>7.5rem (120px)</td>
+								</tr>
+								<tr>
+									<td><code>rounded-full</code></td>
+									<td>100%</td>
+								</tr>
+								<tr>
+									<td><code>rounded-circle</code></td>
+									<td>50%</td>
+								</tr>
+								<tr>
+									<td><code>rounded-pill</code></td>
+									<td>9999px</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<!-- Positioning -->
+					<section id="positioning" class="my-3xl">
+						<h2 class="section-title fs-3xl fw-400 mb-m">Positioning</h2>
+						<div class="demo-box">
+							<div class="position-relative bg-white border rounded-m p-xl" style="height: 200px;">
+								<div class="position-absolute top-0 left-0 p-s bg-primary text-white rounded-s m-s"
+									style="background: #b00b69; color: #fff;">top-0 left-0</div>
+								<div class="position-absolute top-0 right-0 p-s bg-primary text-white rounded-s m-s"
+									style="background: #b00b69; color: #fff;">top-0 right-0</div>
+								<div class="position-absolute bottom-0 left-0 p-s bg-primary text-white rounded-s m-s"
+									style="background: #b00b69; color: #fff;">bottom-0 left-0</div>
+								<div class="position-absolute bottom-0 right-0 p-s bg-primary text-white rounded-s m-s"
+									style="background: #b00b69; color: #fff;">bottom-0 right-0</div>
+							</div>
+							<div class="code-block">
+								&lt;div class="position-relative"&gt;<br>
+								&nbsp;&nbsp;&lt;div class="position-absolute top-0 right-0"&gt;...&lt;/div&gt;<br>
+								&lt;/div&gt;
+							</div>
+						</div>
+					</section>
+
+					<!-- Line Clamp -->
+					<section id="line-clamp" class="my-3xl">
+						<h2 class="section-title fs-3xl fw-400 mb-m">Line Clamp</h2>
+						<div class="demo-box">
+
+							<div class="code-block mt-0">
+								&lt;p class="<span id="clamp-code">line-clamp-3</span>"&gt;...&lt;/p&gt;
+							</div>
+
+							<div class="controls mb-xl">
+								<label class="fw-700 block m-xs">Number of Lines:</label>
+								<input type="range" id="clamp-range" min="1" max="10" value="5" oninput="updateClamp()">
+								<div class="d-flex justify-content-between fs-xs text-secondary mt-xs">
+									<span>1</span>
+									<span>2</span>
+									<span>3</span>
+									<span>4</span>
+									<span>5</span>
+									<span>6</span>
+									<span>7</span>
+									<span>8</span>
+									<span>9</span>
+									<span>10</span>
+								</div>
+								<div class="text-center fw-700" id="clamp-label">5</div>
+							</div>
+
+							<p id="clamp-target" class="line-clamp-3" style="max-width: 300px;">
+								This is an example of long text that will be truncated after a specific number of lines.
+								Line clamp is very useful for product cards, news articles, and other elements where you
+								need
+								to limit the text height. If the text is too long, it will automatically get an ellipsis
+								at
+								the end. Try changing the number of lines using the slider below to see how it works.
+							</p>
+
+						</div>
+					</section>
+
+					<!-- Aspect Ratio -->
+					<section id="aspect-ratio" class="my-3xl">
+						<h2 class="section-title fs-3xl fw-400 mb-m">Aspect Ratio</h2>
+						<div class="demo-box mt-0">
+							<div class="code-block">
+								&lt;div class="<span id="aspect-code">aspect-16-9</span>"&gt;...&lt;/div&gt;
+								<button class="copy-btn backdrop-blur-m" onclick="copyCode(this)">Copy</button>
+							</div>
+
+							<div class="controls my-xl">
+								<label class="fw-700 block mb-xs">Aspect Ratio:</label>
+								<select id="aspect-select" class="p-s w-full rounded-s" onchange="updateAspect()">
+									<option value="aspect-16-9">16:9 (Widescreen)</option>
+									<option value="aspect-4-3">4:3 (Standard)</option>
+									<option value="aspect-square">1:1 (Square)</option>
+									<option value="aspect-21-9">21:9 (Ultrawide)</option>
+									<option value="aspect-9-16">9:16 (Vertical)</option>
+								</select>
+							</div>
+
+							<div class="d-flex justify-content-center mb-m">
+								<div id="aspect-target"
+									class="aspect-16-9 bg-primary rounded-m d-flex align-items-center justify-content-center text-white"
+									style="background: #b00b69; width: 100%; max-width: 400px; transition: aspect-ratio 0.3s;">
+									<span id="aspect-text">16:9</span>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const sizes = ['xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', '3xl', '4xl', '5xl'];
+		const radiusSizes = ['none', 'xxs', 'xs', 's', 'm', 'l', 'xl', 'xxl', '3xl', '4xl', '5xl', 'full'];
+
+		// Spacing Logic
+		function updateSpacing() {
+			const type = document.getElementById('spacing-type').value;
+			const side = document.getElementById('spacing-side').value;
+			const sizeIndex = document.getElementById('spacing-size').value;
+			const size = sizes[sizeIndex];
+
+			const className = `${type}${side}-${size}`;
+
+			const target = document.getElementById('spacing-target');
+			// Reset classes
+			target.className = 'bg-primary text-white rounded-s';
+			target.style.background = '#b00b69';
+			target.style.transition = 'all 0.3s';
+
+			// Add new class
+			target.classList.add(className);
+
+			document.getElementById('spacing-size-label').textContent = size;
+			document.getElementById('spacing-code').textContent = className;
+		}
+
+		// Gap Logic
+		function updateGap() {
+			const sizeIndex = document.getElementById('gap-size').value;
+			const size = sizes[sizeIndex];
+			const className = `gap-${size}`;
+
+			const target = document.getElementById('gap-target');
+			// Remove existing gap classes
+			sizes.forEach(s => target.classList.remove(`gap-${s}`));
+
+			target.classList.add(className);
+
+			document.getElementById('gap-size-label').textContent = size;
+			document.getElementById('gap-code').textContent = className;
+		}
+
+		// Typography Logic
+		function updateTypo() {
+			const sizeIndex = document.getElementById('typo-size').value;
+			const size = sizes[sizeIndex];
+			const weight = document.getElementById('typo-weight').value;
+
+			const sizeClass = `fs-${size}`;
+			const weightClass = `fw-${weight}`;
+
+			const target = document.getElementById('typo-target');
+			// Reset
+			target.className = 'mb-0';
+			target.style.transition = 'all 0.3s';
+
+			target.classList.add(sizeClass, weightClass);
+
+			document.getElementById('typo-size-label').textContent = size;
+			document.getElementById('typo-weight-label').textContent = weight;
+			document.getElementById('typo-code').textContent = `${sizeClass} ${weightClass}`;
+		}
+
+		// Radius Logic
+		function updateRadius() {
+			const index = document.getElementById('radius-range').value;
+			const size = radiusSizes[index];
+			const className = `rounded-${size}`;
+
+			const target = document.getElementById('radius-target');
+
+			// Reset radius classes
+			target.className = 'bg-primary text-white d-flex align-items-center justify-content-center';
+			target.classList.add(className);
+
+			document.getElementById('radius-label').textContent = className;
+			document.getElementById('radius-code').textContent = className;
+		}
+
+		// Line Clamp Logic
+		function updateClamp() {
+			const lines = document.getElementById('clamp-range').value;
+			const className = `line-clamp-${lines}`;
+			const target = document.getElementById('clamp-target');
+
+			// Reset
+			target.className = 'mb-m';
+			target.classList.add(className);
+
+			document.getElementById('clamp-label').textContent = lines;
+			document.getElementById('clamp-code').textContent = className;
+		}
+
+		// Aspect Ratio Logic
+		function updateAspect() {
+			const className = document.getElementById('aspect-select').value;
+			const target = document.getElementById('aspect-target');
+			const text = document.getElementById('aspect-text');
+
+			// Reset
+			target.className = 'bg-primary rounded-m d-flex align-items-center justify-content-center text-white';
+			target.style.width = '100%';
+			target.style.maxWidth = '400px';
+			target.style.transition = 'aspect-ratio 0.3s';
+			target.style.background = '#b00b69';
+
+			target.classList.add(className);
+
+			// Update text based on class
+			let ratioText = '16:9';
+			if (className.includes('4-3')) ratioText = '4:3';
+			if (className.includes('square')) ratioText = '1:1';
+			if (className.includes('21-9')) ratioText = '21:9';
+			if (className.includes('9-16')) ratioText = '9:16';
+
+			text.textContent = ratioText;
+			document.getElementById('aspect-code').textContent = className;
+		}
+
+		// Copy Code
+		function copyCode(btn) {
+			const codeBlock = btn.parentElement;
+			const text = codeBlock.innerText.replace('Copy', '').trim();
+			navigator.clipboard.writeText(text).then(() => {
+				const originalText = btn.innerText;
+				btn.innerText = 'Copied!';
+				setTimeout(() => {
+					btn.innerText = originalText;
+				}, 2000);
+			});
+		}
+
+		// Initialize
+		updateSpacing();
+		updateGap();
+		updateTypo();
+		updateRadius();
+		updateClamp();
+		updateAspect();
+	</script>
+
+</body>
+
+</html>
