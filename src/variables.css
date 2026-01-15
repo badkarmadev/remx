@@ -1,0 +1,63 @@
+:root {
+	--base: 1rem;
+
+	/* Size scale */
+	--size-xxs: calc(var(--base) * 0.25);
+	/* 4px / 16px = 0.25 */
+	--size-xs: calc(var(--base) * 0.5);
+	/* 8px / 16px = 0.5 */
+	--size-s: calc(var(--base) * 0.75);
+	/* 12px / 16px = 0.75 */
+	--size-m: var(--base);
+	/* 16px / 16px = 1 */
+	--size-l: calc(var(--base) * 1.25);
+	/* 20px / 16px = 1.25 */
+	--size-xl: calc(var(--base) * 1.5);
+	/* 24px / 16px = 1.5 */
+	--size-xxl: calc(var(--base) * 2);
+	/* 32px / 16px = 2 */
+	--size-3xl: calc(var(--base) * 3);
+	/* 48px / 16px = 3 */
+	--size-4xl: calc(var(--base) * 4);
+	/* 64px / 16px = 4 */
+	--size-5xl: calc(var(--base) * 7.5);
+	/* 120px / 16px = 7.5 */
+
+	--font-size-xxs: calc(var(--base) * 0.625);
+	/* 10px */
+	--font-size-xs: calc(var(--base) * 0.75);
+	/* 12px */
+	--font-size-s: calc(var(--base) * 0.875);
+	/* 14px */
+	--font-size-m: calc(var(--base) * 1);
+	/* 16px */
+	--font-size-l: calc(var(--base) * 1.25);
+	/* 20px */
+	--font-size-xl: calc(var(--base) * 1.5);
+	/* 24px */
+	--font-size-xxl: calc(var(--base) * 2);
+	/* 32px */
+	--font-size-3xl: calc(var(--base) * 2.5);
+	/* 40px */
+	--font-size-4xl: calc(var(--base) * 3);
+	/* 48px */
+	--font-size-5xl: calc(var(--base) * 4);
+	/* 64px */
+
+	/* Container */
+	--container-xxs: 100%;
+	--container-xs: 480px;
+	--container-s: 576px;
+	--container-m: 720px;
+	--container-l: 960px;
+	--container-xl: 1140px;
+	--container-xxl: 1320px;
+	--container-3xl: 1440px;
+	--container-4xl: 1600px;
+	--container-5xl: 1920px;
+	--container-max-width: var(--container-xxs);
+	--container-padding: var(--base);
+
+	/* Font */
+	--font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}

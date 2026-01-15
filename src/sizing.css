@@ -1,0 +1,283 @@
+.w-auto {
+	width: auto;
+}
+
+.w-full,
+.w-fill,
+.w-100 {
+	width: 100%;
+}
+
+.w-fit {
+	width: fit-content;
+}
+
+.w-max {
+	width: max-content;
+}
+
+.w-min {
+	width: min-content;
+}
+
+.w-xxs {
+	width: var(--size-xxs);
+}
+
+.w-xs {
+	width: var(--size-xs);
+}
+
+.w-s {
+	width: var(--size-s);
+}
+
+.w-m {
+	width: var(--size-m);
+}
+
+.w-l {
+	width: var(--size-l);
+}
+
+.w-xl {
+	width: var(--size-xl);
+}
+
+.w-xxl {
+	width: var(--size-xxl);
+}
+
+.w-3xl {
+	width: var(--size-3xl);
+}
+
+.w-4xl {
+	width: var(--size-4xl);
+}
+
+.w-5xl {
+	width: var(--size-5xl);
+}
+
+.max-w-xxs {
+	max-width: var(--size-xxs);
+}
+
+.max-w-xs {
+	max-width: var(--size-xs);
+}
+
+.max-w-s {
+	max-width: var(--size-s);
+}
+
+.max-w-m {
+	max-width: var(--size-m);
+}
+
+.max-w-l {
+	max-width: var(--size-l);
+}
+
+.max-w-xl {
+	max-width: var(--size-xl);
+}
+
+.max-w-xxl {
+	max-width: var(--size-xxl);
+}
+
+.max-w-3xl {
+	max-width: var(--size-3xl);
+}
+
+.max-w-4xl {
+	max-width: var(--size-4xl);
+}
+
+.max-w-5xl {
+	max-width: var(--size-5xl);
+}
+
+.min-w-xxs {
+	min-width: var(--size-xxs);
+}
+
+.min-w-xs {
+	min-width: var(--size-xs);
+}
+
+.min-w-s {
+	min-width: var(--size-s);
+}
+
+.min-w-m {
+	min-width: var(--size-m);
+}
+
+.min-w-l {
+	min-width: var(--size-l);
+}
+
+.min-w-xl {
+	min-width: var(--size-xl);
+}
+
+.min-w-xxl {
+	min-width: var(--size-xxl);
+}
+
+.min-w-3xl {
+	min-width: var(--size-3xl);
+}
+
+.min-w-4xl {
+	min-width: var(--size-4xl);
+}
+
+.min-w-5xl {
+	min-width: var(--size-5xl);
+}
+
+.h-auto {
+	height: auto;
+}
+
+.h-100,
+.h-full,
+.h-fill {
+	height: 100%;
+}
+
+.h-fit {
+	height: fit-content;
+}
+
+.h-max {
+	height: max-content;
+}
+
+.h-min {
+	height: min-content;
+}
+
+.h-xxs {
+	height: var(--size-xxs);
+}
+
+.h-xs {
+	height: var(--size-xs);
+}
+
+.h-s {
+	height: var(--size-s);
+}
+
+.h-m {
+	height: var(--size-m);
+}
+
+.h-l {
+	height: var(--size-l);
+}
+
+.h-xl {
+	height: var(--size-xl);
+}
+
+.h-xxl {
+	height: var(--size-xxl);
+}
+
+.h-3xl {
+	height: var(--size-3xl);
+}
+
+.h-4xl {
+	height: var(--size-4xl);
+}
+
+.h-5xl {
+	height: var(--size-5xl);
+}
+
+.max-h-xxs {
+	max-height: var(--size-xxs);
+}
+
+.max-h-xs {
+	max-height: var(--size-xs);
+}
+
+.max-h-s {
+	max-height: var(--size-s);
+}
+
+.max-h-m {
+	max-height: var(--size-m);
+}
+
+.max-h-l {
+	max-height: var(--size-l);
+}
+
+.max-h-xl {
+	max-height: var(--size-xl);
+}
+
+.max-h-xxl {
+	max-height: var(--size-xxl);
+}
+
+.max-h-3xl {
+	max-height: var(--size-3xl);
+}
+
+.max-h-4xl {
+	max-height: var(--size-4xl);
+}
+
+.max-h-5xl {
+	max-height: var(--size-5xl);
+}
+
+.min-h-xxs {
+	min-height: var(--size-xxs);
+}
+
+.min-h-xs {
+	min-height: var(--size-xs);
+}
+
+.min-h-s {
+	min-height: var(--size-s);
+}
+
+.min-h-m {
+	min-height: var(--size-m);
+}
+
+.min-h-l {
+	min-height: var(--size-l);
+}
+
+.min-h-xl {
+	min-height: var(--size-xl);
+}
+
+.min-h-xxl {
+	min-height: var(--size-xxl);
+}
+
+.min-h-3xl {
+	min-height: var(--size-3xl);
+}
+
+.min-h-4xl {
+	min-height: var(--size-4xl);
+}
+
+.min-h-5xl {
+	min-height: var(--size-5xl);
+}
