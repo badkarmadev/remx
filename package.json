@@ -4,9 +4,9 @@
   "description": "The simplest CSS framework based on 1rem",
   "author": "BadKarmaDev <yo@wtf.kz>",
   "license": "MIT",
-  "repository": "badkarmadev/remx.css",
-  "homepage": "https://dev.wtf.kz/remx.css",
-  "bugs": "https://github.com/badkarmadev/remx.css/issues",
+  "repository": "badkarmadev/remx",
+  "homepage": "https://dev.wtf.kz/remx",
+  "bugs": "https://github.com/badkarmadev/remx/issues",
   "main": "dist/remx.min.css",
   "style": "dist/remx.min.css",
   "files": [

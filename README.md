@@ -89,8 +89,8 @@ npm run build
 Full documentation is available in the [docs](docs/) directory.
 You can also view the [interactive examples](docs/index.html) or the [Class Reference](docs/reference.md).
 
-[remx.css]: https://github.com/BadKarmaDev/remx.css
+[remx.css]: https://github.com/badkarmadev/remx
 
 ## License
 
-[MIT](LICENSE)
+[MIT](LICENSE.txt)
