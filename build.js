@@ -27,7 +27,7 @@ async function build() {
     const outputPath = path.join(distDir, outputName);
 
     try {
-      await execAsync(`npx postcss ${inputPath} -o ${outputPath}`);
+      await execAsync(`postcss ${inputPath} -o ${outputPath} --map`);
       const size = fs.statSync(outputPath).size;
       console.log(`✓ ${outputName} (${(size / 1024).toFixed(2)} KB)`);
     } catch (error) {
